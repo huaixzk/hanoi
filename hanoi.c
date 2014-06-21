@@ -35,7 +35,7 @@ void move(int src, int dest)
 {
     int tmp;
     //data[src].nr--;
-    tmp = data[src].arr[--(data[src].nr)];
+    tmp = data[src].arr[--data[src].nr];
  //   printf("tmp: %d\n", tmp);
     data[dest].arr[data[dest].nr++] = tmp;
     //data[dest].nr++;
