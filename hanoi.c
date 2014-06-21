@@ -36,10 +36,10 @@ void move(int src, int dest)
     int tmp;
     //data[src].nr--;
     tmp = data[src].arr[--(data[src].nr)];
-    printf("tmp: %d\n", tmp);
+ //   printf("tmp: %d\n", tmp);
     data[dest].arr[data[dest].nr++] = tmp;
     //data[dest].nr++;
-    printf("src: %d  dest: %d\n", data[src].arr[data[src].nr], data[dest].arr[data[dest].nr - 1]);
+   // printf("src: %d  dest: %d\n", data[src].arr[data[src].nr], data[dest].arr[data[dest].nr - 1]);
     getchar();
     hanoi_display();
 }
