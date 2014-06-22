@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 struct stick{
-    int arr[9];
+    int arr[15];
     int nr;
 };
 
@@ -24,9 +24,9 @@ void hanoi_display(void)
     for(;i < 3; i++)
     {
         for(j = 0;j < data[i].nr; j++)
-            printf("%d", data[i].arr[j]);
-        for(k = data[i].nr; k >= data[i].nr && k < 9; k++)
-            printf("-");
+            printf("%2.d", data[i].arr[j]);
+        for(k = data[i].nr; k >= data[i].nr && k < 15; k++)
+            printf(" -");
         printf("\n");
     }
 }
@@ -40,7 +40,7 @@ void move(int src, int dest)
     data[dest].arr[data[dest].nr++] = tmp;
     //data[dest].nr++;
    // printf("src: %d  dest: %d\n", data[src].arr[data[src].nr], data[dest].arr[data[dest].nr - 1]);
-    getchar();
+ //   getchar();
     hanoi_display();
 }
 
@@ -62,15 +62,15 @@ int main(int argc, char **argv)
 {
     if(argc != 2)
     {
-        printf("usage: %s <1-9>\n", *argv);
+        printf("usage: %s <1-15>\n", *argv);
         return 0;
     }
     else
     {
         int m = atoi(*(argv + 1));
-        if(m < 1 || m > 9)
+        if(m < 1 || m > 15)
         {
-            printf("pls input a num < 0 - 9 > not %d\n", m);
+            printf("pls input a num < 0 - 15 > not %d\n", m);
             return 0;
         }
         
