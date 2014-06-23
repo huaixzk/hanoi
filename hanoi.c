@@ -17,14 +17,14 @@ void hanoi_init(int n)
     data[1].nr = 0;
     data[2].nr = 0;
 }
-
 void hanoi_display(void)
 {
-    int i = 0, j = 0, k = 0;
-    for(;i < 3; i++)
+    int i, j, k;
+    for(i = 0 ;i < 3; i++)
     {
-        for(j = 0;j < data[i].nr; j++)
+        for(j = 0; j < data[i].nr; j++)
             printf("%2.d", data[i].arr[j]);
+
         for(k = data[i].nr; k >= data[i].nr && k < 15; k++)
             printf(" -");
         printf("\n");
@@ -40,7 +40,7 @@ void move(int src, int dest)
     data[dest].arr[data[dest].nr++] = tmp;
     //data[dest].nr++;
    // printf("src: %d  dest: %d\n", data[src].arr[data[src].nr], data[dest].arr[data[dest].nr - 1]);
- //   getchar();
+    getchar();
     hanoi_display();
 }
 
