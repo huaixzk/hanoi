@@ -6,5 +6,5 @@ hanoi: hanoi.c
 ascii1: ascii1.c
 	gcc $< -o $@
 clean:
-	rm -rf hanoi ascii
+	rm -rf hanoi ascii1
 	cd ./asm && make clean
