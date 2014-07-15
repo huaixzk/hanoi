@@ -4,7 +4,8 @@ CFLAGS ?= -lGL -lglut -lGLU
 all:hanoi ascii1 asms  tgl tests
 
 asms:
-	cd ./asm && make
+	@echo "asms make..."
+	@cd ./asm && make
 
 tests:
 	cd ./tests/hello && make
