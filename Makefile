@@ -1,6 +1,13 @@
 CFLAGS ?= -lGL -lglut -lGLU
-all:hanoi ascii1   tgl
+.PHONY: tests asms
+
+all:hanoi ascii1 asms  tgl tests
+
+asms:
 	cd ./asm && make
+
+tests:
+	cd ./tests/hello && make
 
 hanoi: hanoi.c 
 	gcc $< -o $@
@@ -11,3 +18,4 @@ tgl: tgl.c
 clean:
 	rm -rf hanoi ascii1 tgl
 	cd ./asm && make clean
+	cd ./tests/hello && make clean
