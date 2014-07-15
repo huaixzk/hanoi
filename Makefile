@@ -1,4 +1,4 @@
-CFLAGS += -lGL -lglut -lGLU
+CFLAGS ?= -lGL -lglut -lGLU
 all:hanoi ascii1   tgl
 	cd ./asm && make
 
