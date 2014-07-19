@@ -1,4 +1,7 @@
-#include <GL/glut.h>
+//#include <GL/glut.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
 
 void init(void){
     glClearColor(0.0,0.0,0.0,0.0);

@@ -1,4 +1,8 @@
-CFLAGS ?= -lGL -lglut -lGLU
+ifeq ($(shell uname), linux)
+CFlAGS ?= -lGL -lGLU -lglut
+else
+CFLAGS ?=   -framework OpenGL  -framework GLUT
+endif
 .PHONY: tests asms
 
 all:hanoi ascii1 asms  tgl tests
