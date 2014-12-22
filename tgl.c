@@ -1,7 +1,15 @@
-//#include <GL/glut.h>
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+// for linux
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+
+
+// for mac
+/*
+ *#include <OpenGL/gl.h>
+ *#include <OpenGL/glu.h>
+ *#include <GLUT/glut.h>
+ */
 
 void init(void){
     glClearColor(0.0,0.0,0.0,0.0);

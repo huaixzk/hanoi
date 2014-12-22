@@ -1,7 +1,8 @@
-ifeq ($(shell uname), linux)
-CFlAGS ?= -lGL -lGLU -lglut
+CFLAGS := -lX11 -lGL -lGLU -lglut
+ifeq ($(shell uname), Linux)
+CFLAGS := -lX11 -lGL -lGLU -lglut
 else
-CFLAGS ?=   -framework OpenGL  -framework GLUT
+CFLAGS ?= -framework OpenGL  -framework GLUT
 endif
 .PHONY: tests asms
 
@@ -19,6 +20,7 @@ hanoi: hanoi.c
 ascii1: ascii1.c
 	gcc $< -o $@
 tgl: tgl.c
+#	@echo $(CFLAGS)   test what ${CFLAGS} is ? and now it is meanless.
 	gcc $< $(CFLAGS) -o $@
 clean:
 	rm -rf hanoi ascii1 tgl
